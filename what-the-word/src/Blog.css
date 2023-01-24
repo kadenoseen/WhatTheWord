@@ -1,0 +1,45 @@
+h1 {
+    position: relative;
+    top: 100px;
+    font-size: 56px;
+    color: #8e44ad;
+    text-align: center;
+    margin-bottom: 50px;
+    height: 250px;
+    text-shadow: 2px 2px #31183b;
+}
+
+h2 {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.blog-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 50px 260px;
+  border: solid #3CB371;
+  border-radius: 5ch;
+  background: #B5EAD7;
+}
+
+
+.image-container {
+    width: 35%;
+    display: block;
+    margin: auto 50px auto 0px;
+  }
+  
+img {
+    border-radius: 30%;
+    width: 100%;
+}
+  
+.text-container {
+    margin: 50px 90px;
+    width: 70%;
+}
+  
+  
