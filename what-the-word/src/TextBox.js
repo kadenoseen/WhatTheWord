@@ -17,7 +17,7 @@ class TextBox extends Component {
 
   handleChange = event => {
     const charCount = event.target.value.length;
-    if (charCount <= 300) {
+    if (charCount <= 500) {
       this.setState({ inputValue: event.target.value });
     }
     else {
@@ -54,6 +54,7 @@ class TextBox extends Component {
   handleSelectBox = async (word) => {
     this.setState({copied: true, currentWord: word});
     navigator.clipboard.writeText(word);
+    window.open(`https://www.dictionary.com/browse/${word}`);
     setTimeout(() => this.setState({copied: false, currentWord: ""}), 1000);
 
   }
@@ -75,8 +76,8 @@ render() {
         {/*<img src={"/logo.webp"} alt="My Website Logo" className="logo" />*/}
         <form onSubmit={this.handleSubmit}>
           <div className="textbox-container">
-            <h3 className="title">What the Word?</h3>
-            <textarea className="textbox" type="text" placeholder="Describe the word in up to 300 chars." value={this.state.inputValue} onChange={this.handleChange}/>
+            <h3 className="title">What's the Word?</h3>
+            <textarea className="textbox" type="text" placeholder="Describe the word in up to 500 chars." value={this.state.inputValue} onChange={this.handleChange}/>
             <button className="submit-button" type="submit">Submit</button>
           </div>
         </form>
@@ -84,10 +85,10 @@ render() {
           {wordBoxes}
         </div>
         <div>
-          <footer>
+          {/*<footer>
             <Link to="/">Home</Link>
             <Link to="/blog">Blog</Link>
-          </footer>
+          </footer>*/}
         </div>
       </div>
       

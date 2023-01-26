@@ -3,13 +3,9 @@ import './Blog.css';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch('/blogs.json')
-      .then(response => response.json())
-      .then(data => setBlogs(data));
+
   }, []);
 
     return (
@@ -26,7 +22,7 @@ const Blog = () => {
                             <p>In conclusion, the rise of AI-assisted language processing is a game changer in the field of communication. It has the ability to revolutionize the way we interact with language on a daily basis, and has the potential to improve the way we learn and teach languages. As the technology continues to evolve, we can expect to see even more exciting developments in this field in the near future.</p>
                         </div>
                     <div className="image-container">
-                        <img src={"blog4.png"} alt={"AI-Assisted Language Processing: A Game Changer in Communication"} />
+                        <img src={"blogImages/blog4.png"} alt={"AI-Assisted Language Processing: A Game Changer in Communication"} />
                     </div>
                 </div>
                 <div className="blog-container">
@@ -40,7 +36,7 @@ const Blog = () => {
                     <p>In conclusion, the potential of AI-assisted language learning is vast and exciting. With personalized, adaptive lessons, instant feedback, and a wide range of resources, AI has the power to revolutionize the way we learn languages. Additionally, real-time translation capabilities can make communication across languages faster and more seamless than ever before. It's an exciting time for language learners and the future looks bright.</p>
                     </div>
                 <div className="image-container">
-                    <img src={"blog5.png"} alt={"Unlocking the Potential of AI-Assisted Language Learning"} />
+                    <img src={"blogImages/blog5.png"} alt={"Unlocking the Potential of AI-Assisted Language Learning"} />
                 </div>
                 </div>
                 <div className="blog-container">
@@ -55,7 +51,7 @@ const Blog = () => {
                         <p>In conclusion, the website that uses AI to guess what word a user is describing is a game changer in the world of language and communication. It is fast, accurate and user-friendly, making it an invaluable tool for anyone looking to improve their vocabulary or find a specific word. With its potential applications in fields such as education and language learning, it is certainly a website worth checking out.</p>
                 </div>
                 <div className="image-container">
-                    <img src={"blog1.png"} alt={"Revolutionizing the Way We Find Lost Words: Introducing AI-Powered Word Guessing"} />
+                    <img src={"blogImages/blog1.png"} alt={"Revolutionizing the Way We Find Lost Words: Introducing AI-Powered Word Guessing"} />
                 </div>
                 
                 </div>
@@ -69,7 +65,7 @@ const Blog = () => {
                         <p>Despite these concerns, the use of AI in personal assistants is only set to continue growing in the coming years. As technology advances and these assistants become even more sophisticated and intuitive, they will become even more integrated into our daily lives, making our lives easier and more efficient.</p>
                     </div>
                 <div className="image-container">
-                    <img src={"blog2.png"} alt={"The Rise of AI-Powered Personal Assistants"} />
+                    <img src={"blogImages/blog2.png"} alt={"The Rise of AI-Powered Personal Assistants"} />
                 </div>
 
                 </div>
@@ -84,7 +80,7 @@ const Blog = () => {
                         <p>Overall, AI has the potential to revolutionize healthcare and improve the lives of patients. As the technology continues to evolve and become more sophisticated, we can expect to see even more applications of AI in the healthcare industry in the future.</p>
                     </div>
                 <div className="image-container">
-                    <img src={"blog3.png"} alt={"The Future of AI in Healthcare"} />
+                    <img src={"blogImages/blog3.png"} alt={"The Future of AI in Healthcare"} />
                 </div>
                 </div>
 

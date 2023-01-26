@@ -19,7 +19,7 @@
 
 
 body {
-  background-image: url('background3.png');
+  background-image: url('backgrounds/background6.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,6 +29,7 @@ body {
 
 footer {
   position: absolute;
+  display: none;
   top: 35px;
   width: 100%;
   font-size: 30px;

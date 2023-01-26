@@ -2,11 +2,16 @@ h1 {
     position: relative;
     top: 100px;
     font-size: 56px;
-    color: #8e44ad;
+    
     text-align: center;
     margin-bottom: 50px;
     height: 250px;
+    color: #e46f31;
     text-shadow: 2px 2px #31183b;
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
 }
 
 h2 {
@@ -20,9 +25,9 @@ h2 {
   display: flex;
   align-items: flex-start;
   margin: 50px 260px;
-  border: solid #3CB371;
+  border: solid #cf5513;
   border-radius: 5ch;
-  background: #B5EAD7;
+  background: #d5865a;
 }
 
 
@@ -43,3 +48,10 @@ img {
 }
   
   
+@media only screen and (max-width: 1650px) {
+    
+    .blog-container {
+        margin: 50px 180px;
+    }
+        
+}

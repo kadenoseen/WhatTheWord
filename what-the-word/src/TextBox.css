@@ -1,9 +1,10 @@
 .container {
     height: 100vh;
+    min-height: 900px;
     width: 100%;
     position: relative;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bolder';
 }
 
 .logo {
@@ -16,6 +17,7 @@
   
 .textbox-container {
     position: absolute;
+    z-index: 9999;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -26,11 +28,16 @@
 .title{
     position: relative;
     bottom: 15px;
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
-    color: rgb(39, 37, 37);
+    color: #e46f31;
+    text-shadow: 2px 2px #31183b;
     margin: 0;
     padding: 0;
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
 }
   
 .textbox {
@@ -46,7 +53,7 @@
     overflow-wrap: break-word;
     resize: none;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular';
 }
 
 .submit-button{
@@ -58,7 +65,12 @@
     border-radius: 15px;
     background-color: #4CAF50;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bolder';
+    z-index: 9999;
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
     
 }
 
@@ -85,6 +97,7 @@ html, body {
     align-content: flex-start;
     margin-top: 20px;
     min-height: 300px;
+
 }
   
 
@@ -97,6 +110,10 @@ html, body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
 }
 
 .word-box-copied {
@@ -108,6 +125,10 @@ html, body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
 }
 
 
@@ -117,10 +138,29 @@ html, body {
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat-Regular';
     src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-  }
+}
 
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('./fonts/Montserrat-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bolder';
+    src: url('./fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('./fonts/Montserrat-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-BolderItalic';
+    src: url('./fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+}
 
 @media only screen and (max-width: 1504px) {
 /* Add styles here that will be applied when the screen size is 1504px or less */
@@ -172,6 +212,7 @@ html, body {
         .textbox-container {
             top: 35%; 
         }
+
         .word-box-container {
             top: 85%;
             width: 85%;
