@@ -6,8 +6,16 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: '*',
+  origin: function(origin, callback) {
+    if (origin !== 'https://whattheword.xyz') {
+      callback(new Error('Not allowed by CORS'));
+    } else {
+      callback(null, true);
+    }
+  },
+  credentials: true
 }));
+
 
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -17,6 +25,16 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+  const allowedOrigins = ['https://whattheword.xyz'];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  next();
+});
+
 
 app.post('/textbox', async (req, res) => {
   const inputValue = req.body.inputValue;
