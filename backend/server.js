@@ -5,16 +5,16 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
+/*app.use(cors({
   origin: function(origin, callback) {
-    if (origin !== 'https://whattheword.xyz') {
+    if (origin !== 'https://whattheword.xyz' || origin !== 'https://whattheword.xyz/blog') {
       callback(new Error('Not allowed by CORS'));
     } else {
       callback(null, true);
     }
   },
   credentials: true
-}));
+}));*/
 
 
 app.use(express.static(path.join(__dirname, 'build')));
@@ -22,6 +22,16 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+app.get('/blog', (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ error: 'Internal Server Error' });
+  }
+});
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
